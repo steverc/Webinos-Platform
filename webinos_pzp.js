@@ -97,6 +97,7 @@ var fileParams = {},
   {name: "authentication", params: {}},
   {name: "contacts", params: {}},
   {name: "devicestatus", params: {}},
+  {name: "messaging", params: {}},
   {name: "discovery", params: {}}
 ];
 

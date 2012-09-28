@@ -67,6 +67,10 @@
     "discovery": {
       "name": "Discovery",
       "location": "api/discovery/"
+    },
+    "messaging": {
+      "name": "Messaging",
+      "location": "api/messaging/"
     }
   },
   "manager": {

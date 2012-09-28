@@ -75,6 +75,8 @@
 		<file name="api/vehicle/lib/webinos.vehicle.fake.js"/>
 		<file name="api/vehicle/lib/webinos.vehicle.rpc.js"/>
 		<file name="api/vehicle/lib/webinos.vehicle.sim.js"/>
+		<!-- Messaging -->
+		<file name="api/messaging/lib/webinos.messaging.rpc.js"/>
 		
 		<!-- Manager -->
 

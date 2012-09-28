@@ -34,6 +34,7 @@
             	<file name="wrt/lib/webinos.devicestatus.js"/>
 		<file name="wrt/lib/webinos.discovery.js"/>
 		<file name="wrt/lib/webinos.payment.js"/>
+		<file name="wrt/lib/webinos.messaging.js"/>
             </sources>
         </jscompiler>
     </target>	

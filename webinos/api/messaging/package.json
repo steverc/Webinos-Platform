@@ -1,0 +1,27 @@
+{
+  "name": "messaging"
+, "publishConfig": { "tag": "alpha" }
+, "description": "messaging API"
+, "keywords": ["webinos", "messaging" , "API"]
+, "version": "0.0.1"
+, "homepage": "http://webinos.org/"
+, "author": "Stefano Vercelli <stefano.vercelli@telecomitalia.it>"
+, "repository":
+  { "type": "git"
+  , "url": "http://dev.webinos.org/git/wp4.git"
+  }
+, "bugs":
+  { "email": "webinos-wp4-ml@fokus.fraunhofer.de"
+  , "url": ""
+  }
+, "directories": { 
+                 "lib": "./lib"
+                 }
+, "main": "./lib/webinos.messaging.rpc"
+, "dependencies":
+  {
+  }
+, "bundleDependencies":
+  [
+  ]
+}

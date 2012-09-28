@@ -30,6 +30,7 @@ var fileList = "--js ./webinos/common/rpc/lib/rpc.js" +
               " --js ./webinos/wrt/lib/webinos.devicestatus.js" + 
               " --js ./webinos/wrt/lib/webinos.contacts.js" + 
               " --js ./webinos/wrt/lib/webinos.discovery.js" + 
+              " --js ./webinos/wrt/lib/webinos.messaging.js" + 
               " --js ./webinos/wrt/lib/webinos.authentication.js";
                     
 if (typeof cmd === "undefined") {
