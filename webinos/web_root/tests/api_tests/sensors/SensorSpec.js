@@ -21,7 +21,7 @@ describe ( "Test ability to add a sensor", function () {
         	expect(sensorToUse.api).toEqual(jasmine.any(object)); 
   	  }); 
 	it('Test ability to define a sensor\'s type',  function () {  
-        	expect(sensorToUse.api).toEqual("http://webinos.org/api/sensors.temperature"); 
+        	expect(sensorToUse.api).toEqual("http://webinos.org/api/sensors/temperature"); 
   	  }); 
 	it('Test ability to add maximum range to sensor',  function () {  
         	expect(sensorToUse.maximumRange).toEqual(jasmine.any(Number));

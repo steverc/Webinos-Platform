@@ -32,7 +32,7 @@
             $('<option></option>').appendTo('#pzh_pzp_list');
             $('#messages').empty();
             counter = 0;
-            webinos.discovery.findServices(new ServiceType('http://webinos.org/api/sensors.'+$('#sensorTypeList option:selected').val()), 
+            webinos.discovery.findServices(new ServiceType('http://webinos.org/api/sensors/'+$('#sensorTypeList option:selected').val()), 
                 {onFound: function (service) {
                     $('<option value=' + service.id + ' >' + counter +':' +service.serviceAddress + '</option>').appendTo('#pzh_pzp_list');
                     sensors[service.id] = service;

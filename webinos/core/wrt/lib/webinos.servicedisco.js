@@ -89,13 +89,13 @@
                 if (typeof TestModule !== 'undefined') typeMap['http://webinos.org/api/test'] = TestModule;
                 if (typeof ActuatorModule !== 'undefined') {
                     typeMap['http://webinos.org/api/actuators'] = ActuatorModule;
-                    typeMap['http://webinos.org/api/actuators.linearmotor'] = ActuatorModule;
-                    typeMap['http://webinos.org/api/actuators.switch'] = ActuatorModule;
-                    typeMap['http://webinos.org/api/actuators.rotationalmotor'] = ActuatorModule;
-                    typeMap['http://webinos.org/api/actuators.vibratingmotor'] = ActuatorModule;
-                    typeMap['http://webinos.org/api/actuators.servomotor'] = ActuatorModule;
-                    typeMap['http://webinos.org/api/actuators.swivelmotor'] = ActuatorModule;
-                    typeMap['http://webinos.org/api/actuators.thermostat'] = ActuatorModule;
+                    typeMap['http://webinos.org/api/actuators/linearmotor'] = ActuatorModule;
+                    typeMap['http://webinos.org/api/actuators/switch'] = ActuatorModule;
+                    typeMap['http://webinos.org/api/actuators/rotationalmotor'] = ActuatorModule;
+                    typeMap['http://webinos.org/api/actuators/vibratingmotor'] = ActuatorModule;
+                    typeMap['http://webinos.org/api/actuators/servomotor'] = ActuatorModule;
+                    typeMap['http://webinos.org/api/actuators/swivelmotor'] = ActuatorModule;
+                    typeMap['http://webinos.org/api/actuators/thermostat'] = ActuatorModule;
                 }
                 if (typeof WebNotificationModule !== 'undefined') typeMap['http://webinos.org/api/notifications'] = WebNotificationModule;
                 if (typeof oAuthModule!== 'undefined') typeMap['http://webinos.org/mwc/oauth'] = oAuthModule;
@@ -107,13 +107,13 @@
                 if (typeof AppLauncherModule !== 'undefined') typeMap['http://webinos.org/api/applauncher'] = AppLauncherModule;
                 if (typeof Sensor !== 'undefined') {
                     typeMap['http://webinos.org/api/sensors'] = Sensor;
-                    typeMap['http://webinos.org/api/sensors.temperature'] = Sensor;
-                    typeMap['http://webinos.org/api/sensors.light'] = Sensor;
-                    typeMap['http://webinos.org/api/sensors.proximity'] = Sensor;
-                    typeMap['http://webinos.org/api/sensors.noise'] = Sensor;
-                    typeMap['http://webinos.org/api/sensors.pressure'] = Sensor;
-                    typeMap['http://webinos.org/api/sensors.humidity'] = Sensor;
-                    typeMap['http://webinos.org/api/sensors.heartratemonitor'] = Sensor;
+                    typeMap['http://webinos.org/api/sensors/temperature'] = Sensor;
+                    typeMap['http://webinos.org/api/sensors/light'] = Sensor;
+                    typeMap['http://webinos.org/api/sensors/proximity'] = Sensor;
+                    typeMap['http://webinos.org/api/sensors/noise'] = Sensor;
+                    typeMap['http://webinos.org/api/sensors/pressure'] = Sensor;
+                    typeMap['http://webinos.org/api/sensors/humidity'] = Sensor;
+                    typeMap['http://webinos.org/api/sensors/heartratemonitor'] = Sensor;
                 }
                 if (typeof PaymentModule !== 'undefined') typeMap['http://webinos.org/api/payment'] = PaymentModule;
                 if (typeof UserProfileIntModule !== 'undefined') typeMap['UserProfileInt'] = UserProfileIntModule;

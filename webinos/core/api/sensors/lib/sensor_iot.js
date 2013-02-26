@@ -88,7 +88,7 @@ var RPCWebinosService = require("webinos-jsonrpc2").RPCWebinosService;
         }
 
         var sensorEvent = {};
-        sensorEvent.sensorType = "http://webinos.org/api/sensors."+type;
+        sensorEvent.sensorType = "http://webinos.org/api/sensors/"+type;
         sensorEvent.sensorId = this.id;
         sensorEvent.accuracy = 0;
         sensorEvent.rate = 0;
@@ -97,7 +97,7 @@ var RPCWebinosService = require("webinos-jsonrpc2").RPCWebinosService;
         sensorEvent.position = null;
         
         this.base({
-            api: 'http://webinos.org/api/sensors.'+type,
+            api: 'http://webinos.org/api/sensors/'+type,
             displayName: name,
             description: description //+' - id '+id
         });

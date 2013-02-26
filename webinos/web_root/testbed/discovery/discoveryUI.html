@@ -151,7 +151,7 @@
 
 			var val = document.getElementById('Service').value;
 			console.log("val:" + val);
-			// "*", "*temper*", http://webinos.org/api/sensors.temperature
+			// "*", "*temper*", http://webinos.org/api/sensors/temperature
 			webinos.discovery.findServices(new ServiceType(val), {
 				onFound : function(service) {
 
