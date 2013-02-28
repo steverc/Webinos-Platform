@@ -2,6 +2,10 @@
     "use strict";
 
     var path = require('path');
+    var fEx = require('./featureExtraction.js');
+    for(var i in fEx) {
+        console.log('fEx has '+i);
+    }
     var dependencies= require('find-dependencies')(__dirname);
     var webinosPath = dependencies.local.require(dependencies.local.pzp.location).getWebinosPath();
     var policyFile = path.join(webinosPath,"policies", "policy.xml");
@@ -30,21 +34,26 @@ function handleMessage() {
         var id = rpcRequest.id;
         if (typeof id === 'undefined') return;
 
-        var apiFeatureID, apiFeature, apiFeaturesMap = {'ServiceDiscovery':'http://webinos.org/api/discovery'};
+        //var apiFeatureID, apiFeature, apiFeaturesMap = {'ServiceDiscovery':'http://webinos.org/api/discovery'};
         var serviceId = null;
 
         var idx = rpcRequest.method.lastIndexOf('@');
 
         if (idx == -1) {
-            idx = rpcRequest.method.lastIndexOf('.');
-            apiFeatureID = rpcRequest.method.substring(0, idx);
-            apiFeature = apiFeaturesMap[apiFeatureID];
+            //idx = rpcRequest.method.lastIndexOf('.');
+            //apiFeatureID = rpcRequest.method.substring(0, idx);
+            //apiFeature = apiFeaturesMap[apiFeatureID];
         } else {
-            apiFeature = rpcRequest.method.substring(0, idx);
+            //apiFeature = rpcRequest.method.substring(0, idx);
             serviceId = rpcRequest.method.substring(idx+1);
             idx = serviceId.indexOf('.');
             serviceId = serviceId.substring(0, idx);
         }
+
+        var featureData = fEx.getFeatureData(rpcRequest.method);
+        var apiFeature = featureData.apiFeature;
+        var subFeatures = featureData.subFeatures;
+        var featureParams = featureData.params;
 
         //If no feature is associated to the request, then allow
         if(apiFeature == null) {
@@ -73,7 +82,16 @@ function handleMessage() {
             //request is allowed by policy manager
             return true;
         } else {
-            //request is NOT allowed by policy manager
+            //feature request is NOT allowed by policy manager
+            console.log('Policy manager denied main feature');
+            for(var i in subFeatures) {
+                console.log('Policy manager denied main feature - checking subfeature '+subFeatures[i]);
+                request.resourceInfo['apiFeature'] = subFeatures[i];
+                if (pm.enforceRequest(request, sessionId) == 0) {
+                    //request is allowed by policy manager
+                    return true;
+                }
+            }
             return false;
         }
     }
